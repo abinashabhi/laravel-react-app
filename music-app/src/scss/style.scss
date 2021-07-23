@@ -1,0 +1,340 @@
+$myColor: #444444;
+$appColor : #171717 ;
+$bodyFont-color:#fff;
+$hover-color : #185ADB;
+$heading_size:1rem;
+$table-margin:10% 5% 2%;
+$fixed-padding:2% 5%;
+$center: 25px;
+$bottom-section-color:#242529;
+$bottom-hover-color:#28292e;
+
+
+body{
+    background-color : $myColor;
+    color: $bodyFont-color;
+}
+
+#main{
+  background-color:$myColor;
+  height: 300px;
+  width: 90%;
+  margin: 5%;
+  & a{  
+    width: 25px;
+  } 
+  & button{
+      height: 20px;
+      width: 20px;
+      top:50%;
+      border: none;
+      background-color: $appColor;
+      & i{
+          color:$bodyFont-color;
+      }
+  }
+  
+}
+
+.heading-text{
+    margin-top: 2%;
+    font-size: $heading_size;
+}
+.carousel-item {
+     img{
+        padding: 0;
+        height: 400px;
+        width: 100%;
+    }
+}
+
+.carousel-control-next-icon{
+  height: 25px;
+  width: 15px;  
+  font-weight: 100;
+  background-color: $appColor;
+}
+.carousel-control-prev-icon{
+  @extend .carousel-control-next-icon
+}
+#table{
+    margin: $table-margin;
+    & h2{
+        font-size: $heading_size;
+    }
+    .table{
+        td{            
+            font-size: 0.8rem;
+            p{
+                margin-top: 10px;
+                
+            }
+           
+            i{
+                @extend p;
+                font-size: 1.2rem;
+                
+            }
+            span{
+                margin-top: 20px;
+            }
+            .fa-play{
+                
+                color: $hover-color;
+                &:hover{
+                    color:$bodyFont-color;
+                }
+            }
+        }
+    }
+}
+.btn{
+    color: $bodyFont-color;
+    border: none;
+    margin:15px 5px;
+    padding: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    &:hover{
+        background-color: $hover-color;
+    }
+}
+
+.album{
+    padding: 0 5% 3%;
+}
+
+.slide-items{
+    display: flex;
+    
+}
+
+
+
+.album-descripton{
+    background-color: $hover-color;
+}
+
+
+.downloads{
+    padding:0 5%;
+    & h2{
+        font-size: $heading_size;
+    }
+    .table{
+        
+        td{            
+            font-size: 0.8rem;
+            p{
+                margin: 10px 5px 0 ;
+                
+            }
+            img{
+                margin-top:5px;
+             }
+            i{
+               margin-top: 15px;
+                font-size: 1.2rem;
+                
+            }            
+            .fa-play{
+                @extend i;  
+                color: $hover-color;
+                &:hover{
+                    color:$bodyFont-color;
+                }
+            }
+        }
+    }
+}
+
+.genre-container{
+    display: flex;
+    padding: 0 5%;
+    
+}
+.genres-box{
+    
+    height: 150px;
+    width: 300px;
+    margin: 0 10px 3%;
+}
+.genre-content h2{
+    font-size: $heading_size;
+    padding: $fixed-padding;
+}
+.genre-all{
+    margin: 3% 4% 0;
+
+}
+#trending-charts{
+    
+    .table{
+        td{            
+            font-size: 0.8rem;
+            p{
+                margin-top: 10px;
+                
+            }
+           
+            i{
+                @extend p;
+                font-size: 1.2rem;
+                
+            }
+            span{
+                margin-top: 20px;
+            }
+            .fa-play{
+                
+                color: $hover-color;
+                &:hover{
+                    color:$bodyFont-color;
+                }
+            }
+        }
+    }
+    margin: $fixed-padding;
+    & h2{
+        font-size: $heading_size;
+    }
+}
+#trending-pack {
+    .album-item{
+        height: 200px;
+        width: 200px;    
+        margin: 5px;
+        
+        img{
+            
+            height: 160px;
+            width: 160px;
+        }    
+    
+    }
+    .current-song{
+
+        display: flex;
+        
+        font-size: 0.8rem;
+        padding: 5% ;
+        text-align: center;
+        height: 50px;
+        background-color:$bottom-section-color;
+        &:hover{
+            background-color: $bottom-hover-color;
+        }
+        i{        
+            color: $hover-color;
+            margin: 3%;
+            font-size: 1rem;
+            padding: 2px;
+            &:hover{
+                color:$bodyFont-color;
+            }
+        }
+        p{
+            font-size: 0.8rem;       
+            margin:3%;
+        }
+    }
+
+    padding:$fixed-padding;
+   
+    
+}
+#top-charts{
+    padding: $fixed-padding;
+    
+    h2{
+        font-size: $heading_size;
+    }
+    table{
+        tr{
+            font-size: 0.8rem;
+                        
+            
+          .center{
+              margin-top:15px;
+          }
+            i{
+                margin-top: 15px;
+                font-size: 1.2rem;               
+                
+            }
+            .fa-play{
+                color: $hover-color;
+                &:hover{
+                   color:$bodyFont-color;     
+                }
+            }
+            p{
+                font-size: 0.8rem;       
+                margin:3%;
+            }
+        }
+    }
+}
+#news{
+    @extend #top-charts ;
+    .news-cards{
+        display: flex;
+    }
+    .news-conetent{
+        
+        height: 350px;
+        width: 430px;
+        margin: 0 13px;
+        
+        & img{
+            
+            height: 250px;
+            width: 430px;            
+        }       
+        & p{
+            
+            font-size: 0.8rem;
+        }
+    }
+}
+
+#footer{
+    @extend .album ;
+    & p{
+        font-size: 0.7rem;
+    }
+    
+}
+
+.next_caro{
+    color: red;
+}
+
+// .slick-prev:before, .slick-next:before {
+//     font-family: 'slick';
+//     font-size: 20px;
+//     line-height: 1;
+//     opacity: .75;
+//     position: absolute;
+//     border: 1px solid white;
+//     background-color: $myColor;
+//     color:$appColor !important;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+// .slick-prev:before{
+//     top:-120px;    
+//     left: 1350px;
+// }
+ 
+// .slick-next:before{
+//     top:-120px;
+//     right: 40px;
+   
+// }
+// .slick-prev:before {
+//     content: '\27A5';
+// }
+svg:hover{
+    color:pink;
+}
